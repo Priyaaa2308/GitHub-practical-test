@@ -9,15 +9,6 @@
   --border: #e2e6ee;
 }
 
-body.dark {
-  --bg: #12151c;
-  --bg-alt: #181c25;
-  --text: #e8ebf2;
-  --muted: #9aa3b5;
-  --card: #1d222d;
-  --border: #2a3040;
-}
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -38,6 +29,7 @@ a { color: var(--accent); text-decoration: none; }
   top: 0;
   z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 14px 6%;
@@ -47,19 +39,9 @@ a { color: var(--accent); text-decoration: none; }
 
 .logo { font-weight: 700; font-size: 1.2rem; }
 
-#nav-links { display: flex; align-items: center; gap: 22px; }
+#nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
 #nav-links a { color: var(--text); }
 #nav-links a:hover { color: var(--accent); }
-
-#theme-toggle, #menu-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: var(--text);
-}
-
-#menu-toggle { display: none; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -148,20 +130,3 @@ footer { text-align: center; padding: 24px; color: var(--muted); border-top: 1px
 /* ---------- Fade-in on scroll ---------- */
 .fade { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
 .fade.show { opacity: 1; transform: none; }
-
-/* ---------- Mobile ---------- */
-@media (max-width: 700px) {
-  #menu-toggle { display: block; }
-  #nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    padding: 18px;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-  #nav-links.open { display: flex; }
-}
