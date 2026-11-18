@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priya Kumari| Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">Priya Kumari</a>
+    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <p class="hero-small">Hello, I'm</p>
+    <h1>Priya Kumari</h1>
+    <h2 id="typing"></h2>
+    <p class="hero-text">I'm a passionate web developer.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="about-text">
+      I am a web developer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and Java. I enjoy learning new technologies and improving my skills. In my free time, I like to contribute to open-source projects and explore new frameworks.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section alt">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Java</span>
+      <span class="skill">Git</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>NetraDrishti</h3>
+        <p>A web application for the nearest centre for dignosis of vission loss caused by diabetic retinopathy.</p>
+        <a href="#" target="_blank">View project →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <h2 class="section-title">Contact</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="email" id="email" placeholder="Your email" required>
+      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+      <p id="form-status"></p>
+    </form>
+    <p class="links">
+      <a href="mailto:priyaakumari2308@gmail.com">Email</a> ·
+      <a href="https://github.com/Priyaaa2308" target="_blank">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/priya-kumari-62544937a/" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Priya Kumari</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
