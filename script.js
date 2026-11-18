@@ -28,30 +28,6 @@ function type() {
 }
 type();
 
-// ---------- Dark mode toggle (remembers your choice) ----------
-const themeBtn = document.getElementById("theme-toggle");
-
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-  themeBtn.textContent = "☀️";
-}
-
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-  const isDark = document.body.classList.contains("dark");
-  themeBtn.textContent = isDark ? "☀️" : "🌙";
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
-// ---------- Mobile menu ----------
-const navLinks = document.getElementById("nav-links");
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-navLinks.querySelectorAll("a").forEach(link =>
-  link.addEventListener("click", () => navLinks.classList.remove("open"))
-);
-
 // ---------- Fade-in sections when scrolled into view ----------
 const fadeEls = document.querySelectorAll(".section .section-title, .card, .skill");
 fadeEls.forEach(el => el.classList.add("fade"));
